@@ -1,6 +1,8 @@
 // 1
 
-// const delay = ms => new Promise(resolve => setTimeout(() => resolve(ms), ms));
+// const delay = ms => {
+//   return new Promise(resolve => setTimeout(() => resolve(ms), ms));
+// };
 
 // const logger = time => console.log(`Resolved after ${time}ms`);
 
@@ -17,13 +19,14 @@
 //   { name: 'Lux', active: false },
 // ];
 
-// const toggleUserState = (allUsers, userName) =>
-//   new Promise(resolve => {
+// const toggleUserState = (allUsers, userName) => {
+//   return new Promise(resolve => {
 //     const updatedUsers = allUsers.map(user =>
 //       user.name === userName ? { ...user, active: !user.active } : user
 //     );
 //     resolve(updatedUsers);
 //   });
+// };
 
 // const logger = updatedUsers => console.table(updatedUsers);
 
@@ -32,16 +35,18 @@
 
 // 3
 
-// const randomIntegerFromInterval = (min, max) =>
-//   Math.floor(Math.random() * (max - min + 1) + min);
+// const randomIntegerFromInterval = (min, max) => {
+//   return Math.floor(Math.random() * (max - min + 1) + min);
+// };
 
-// const makeTransaction = ({ id }) =>
-//   new Promise((resolve, reject) => {
+// const makeTransaction = ({ id }) => {
+//   return new Promise((resolve, reject) => {
 //     const delay = randomIntegerFromInterval(200, 500);
 //     setTimeout(() => {
 //       Math.random() > 0.3 ? resolve({ id, time: delay }) : reject(id);
 //     }, delay);
 //   });
+// };
 
 // const logSuccess = ({ id, time }) =>
 //   console.log(`Transaction ${id} processed in ${time}ms`);
